@@ -79,8 +79,6 @@ data:
 
   masters:
     - hostname: n1
-    - hostname: n2
-    - hostname: n3
 
   node_ports:
     drydock_api: 30000
