@@ -17,8 +17,8 @@ data:
     ip_autodetection_method: 'interface=ens3'
     bgp:
       ipv4:
-        ingress_vip: '172.24.1.6/32'
-        maas_vip: '172.24.1.5/32'
+        ingress_vip: '192.169.1.6/32'
+        maas_vip: '192.169.1.5/32'
         public_service_cidr: 'Nonsense'
         peers:
           - 'Nonsense'
@@ -37,18 +37,17 @@ data:
     # List of upstream DNS forwards. Verify you can reach them from your
     # environment. If so, you should not need to change them.
     upstream_servers:
-      - 172.24.1.9
-      - 172.24.1.9
-      - 172.24.1.9
+      - 192.168.22.2
+      - 192.168.22.2
     # Repeat the same values as above, but formatted as a common separated
     # string
-    upstream_servers_joined: 172.24.1.9
+    upstream_servers_joined: 192.168.22.2,192.168.22.2
     ingress_domain: gate.local
     node_domain: gate.local
 
   genesis:
-    hostname: n0
-    ip: 172.24.1.10
+    hostname: ats-nodea3
+    ip: 192.168.22.5
 
   proxy:
     http: ""
@@ -56,7 +55,7 @@ data:
     no_proxy: []
 
   bootstrap:
-    ip: 172.24.1.10
+    ip: 192.168.22.5
 
   kubernetes:
     # K8s API service IP
@@ -86,8 +85,8 @@ data:
     maas_proxy: 31800  # hardcoded in MAAS
 
   vip:
-    ingress_vip: '172.24.1.6/32'
-    maas_vip: '172.24.1.5/32'
+    ingress_vip: '192.169.1.6/32'
+    maas_vip: '192.169.1.5/32'
 
   ntp:
     # comma separated NTP server list. Verify that these upstream NTP servers are
@@ -112,8 +111,8 @@ data:
 
   storage:
     ceph:
-      public_cidr: 172.24.1.0/24
-      cluster_cidr: 172.24.1.0/24
+      public_cidr: 192.168.22.0/24
+      cluster_cidr: 192.168.22.0/24
 
   neutron:
     tunnel_device: 'ens3'

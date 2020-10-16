@@ -8,5 +8,5 @@ metadata:
     layer: site
   storagePolicy: cleartext
 data:
-  hostcidr: 172.24.1.0/24
+  hostcidr: 192.168.22.0/24
 ...

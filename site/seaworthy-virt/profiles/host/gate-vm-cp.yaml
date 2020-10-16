@@ -24,7 +24,7 @@ data:
   primary_network: 'gp'
   oob:
     type: 'libvirt'
-    libvirt_uri: 'qemu+ssh://virtmgr@172.24.1.1/system'
+    libvirt_uri: 'qemu+ssh://virtmgr@192.168.22.1/system'
   storage:
     physical_devices:
       vda:
@@ -80,7 +80,7 @@ data:
   primary_network: 'gp'
   oob:
     type: 'libvirt'
-    libvirt_uri: 'qemu+ssh://virtmgr@172.24.1.1/system'
+    libvirt_uri: 'qemu+ssh://virtmgr@192.168.22.1/system'
   storage:
     physical_devices:
       vda:

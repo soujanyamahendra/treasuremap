@@ -29,16 +29,16 @@ metadata:
   storagePolicy: cleartext
 data:
   mtu: 1500
-  cidr: 172.24.1.0/24
+  cidr: 192.168.22.0/24
   ranges:
     - type: dhcp
-      start: 172.24.1.100
-      end: 172.24.1.200
+      start: 192.168.22.100
+      end: 192.168.22.200
   routes:
     - subnet: 0.0.0.0/0
-      gateway: 172.24.1.1
+      gateway: 192.168.22.1
       metric: 10
   dns:
     domain: gate.local
-    servers: '172.24.1.9'
+    servers: '192.168.22.2'
 ...
