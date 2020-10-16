@@ -46,8 +46,8 @@ data:
     node_domain: gate.local
 
   genesis:
-    hostname: ats-nodea3
-    ip: 192.168.22.5
+    hostname: saket-vm
+    ip: 192.168.22.12
 
   proxy:
     http: ""
@@ -55,7 +55,7 @@ data:
     no_proxy: []
 
   bootstrap:
-    ip: 192.168.22.5
+    ip: 192.168.22.12
 
   kubernetes:
     # K8s API service IP

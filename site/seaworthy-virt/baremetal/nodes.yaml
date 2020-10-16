@@ -11,9 +11,9 @@ data:
   host_profile: cp-global
   addressing:
     - network: gp
-      address: 172.24.1.11
+      address: 192.168.22.5
   metadata:
-    boot_mac: '52:54:00:00:a3:31'
+    boot_mac: '02:4c:2d:22:c2:ee'
     rack: rack1
     tags:
       - 'masters'
