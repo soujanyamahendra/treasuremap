@@ -21,7 +21,7 @@ data:
     # bond and VLAN number specified in networks/physical/networks.yaml for the Calico
     # network. E.g. VLAN 22 for the calico network as a member of bond0, you
     # would set "interface=bond0.22" as shown here.
-    ip_autodetection_method: interface=enp67s0f0.72
+    ip_autodetection_method: interface=ens3
     etcd:
       # etcd service IP address
       service_ip: 10.96.232.136
@@ -34,11 +34,11 @@ data:
     # List of upstream DNS forwards. Verify you can reach them from your
     # environment. If so, you should not need to change them.
     upstream_servers:
-      - 8.8.8.8
-      - 8.8.4.4
+      - 192.168.22.2
+      - 192.168.22.2
     # Repeat the same values as above, but formatted as a common separated
     # string
-    upstream_servers_joined: 8.8.8.8,8.8.4.4
+    upstream_servers_joined: 192.168.22.2,192.168.22.2
     # NEWSITE-CHANGEME: FQDN for ingress (i.e. "publicly facing" access point)
     # Choose FQDN according to the ingress/public FQDN naming conventions at
     # the top of this document.
@@ -50,15 +50,15 @@ data:
     # networks/physical/networks.yaml
     # NOTE: Ensure that the genesis node is manually configured with this
     # hostname before running `genesis.sh` on the node.
-    hostname: airsloop-control-1
+    hostname: saket-vm
     # NEWSITE-CHANGEME: Calico IP of the Genesis node. Use the "start" value for
     # the calico network defined in networks/physical/networks.yaml for this IP.
-    ip: 10.22.72.21
+    ip: 192.168.22.12
 
   bootstrap:
     # NEWSITE-CHANGEME: Update with the "start" value/IP of the static range
     # defined for the pxe network in networks/physical/networks.yaml
-    ip: 10.22.70.21
+    ip: 192.168.22.12
 
   kubernetes:
     # K8s API service IP
@@ -83,8 +83,7 @@ data:
   # control plane servers. Ensure that this matches the nodes with the 'masters'
   # tags applied in baremetal/nodes.yaml
   masters:
-    - hostname: airsloop-control-2
-    - hostname: airsloop-control-3
+    - hostname: n1
 
   # NEWSITE-CHANGEME: Environment proxy information.
   # NOTE: Reference Airship sites do not deploy behind a proxy, so this proxy section
@@ -132,22 +131,22 @@ data:
     ceph:
       # NEWSITE-CHANGEME: CIDRs for Ceph. Update to match the network CIDR
       # used for the `storage` network in networks/physical/networks.yaml
-      public_cidr: '10.22.73.0/24'
-      cluster_cidr: '10.22.73.0/24'
+      public_cidr: '192.168.22.0/24'
+      cluster_cidr: '192.168.22.0/24'
 
   neutron:
     # NEWSITE-CHANGEME: Overlay network for VM traffic. Ensure the bond name and
     # VLAN number are consistent with what's defined for the bond and the overlay
     # network in networks/physical/networks.yaml
-    tunnel_device: 'enp67s0f0.74'
+    tunnel_device: 'ens3'
     # bond which the overlay is a member of. Ensure the bond name is consistent
     # with the bond assigned to the overlay network in
     # networks/physical/networks.yaml
-    external_iface: 'enp67s0f0'
+    external_iface: 'ens3'
 
   openvswitch:
     # bond which the overlay is a member of. Ensure the bond name is consistent
     # with the bond assigned to the overlay network in
     # networks/physical/networks.yaml
-    external_iface: 'enp67s0f0'
+    external_iface: 'ens3'
 ...

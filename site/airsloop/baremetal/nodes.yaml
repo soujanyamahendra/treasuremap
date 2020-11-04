@@ -33,7 +33,7 @@ schema: 'drydock/BaremetalNode/v1'
 metadata:
   schema: 'metadata/Document/v1'
   # NEWSITE-CHANGEME: The next node's hostname
-  name: airsloop-compute-1
+  name: ats-nodea3
   layeringDefinition:
     abstract: false
     layer: site
@@ -41,18 +41,8 @@ metadata:
 data:
   # NEWSITE-CHANGEME: The next node's IPv4 addressing
   addressing:
-    - network: oob
-      address: 10.22.104.22
-    - network: pxe
-      address: 10.22.70.22
-    - network: oam
-      address: 10.22.71.22
-    - network: calico
-      address: 10.22.72.22
-    - network: storage
-      address: 10.22.73.22
-    - network: overlay
-      address: 10.22.74.22
+    - network: gp
+      address: 192.168.22.12
   # NEWSITE-CHANGEME: The next node's host profile
   # This is the third "primary" control plane profile after genesis
   host_profile: compute_r720xd
