@@ -42,7 +42,7 @@ data:
   # NEWSITE-CHANGEME: The next node's IPv4 addressing
   addressing:
     - network: gp
-      address: 192.168.22.12
+      address: 192.168.22.5
   # NEWSITE-CHANGEME: The next node's host profile
   # This is the third "primary" control plane profile after genesis
   host_profile: compute_r720xd
