@@ -73,6 +73,7 @@ data:
       start: 192.168.22.100
       end: 192.168.22.110
 ...
+---
 schema: 'drydock/NetworkLink/v1'
 metadata:
   schema: 'metadata/Document/v1'
@@ -115,7 +116,7 @@ data:
       end: 192.168.22.110
     - type: dhcp
       start: 192.168.22.121
-      end: 172.24.1.131
+      end: 192.168.22.131
   dns:
     domain: atlantafoundry.com
     servers: '192.168.22.2'
