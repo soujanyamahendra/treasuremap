@@ -22,23 +22,20 @@ metadata:
 data:
   hardware_profile: dell_r720xd
 
-  primary_network: oam
+  primary_network: gp
   interfaces:
     pxe:
-      device_link: pxe
+      device_link: gp
       slaves:
-        - pxe_nic01
+        - ens3
       networks:
-        - pxe
+        - gp
     data:
-      device_link: data
+      device_link: gp
       slaves:
-        - data_nic01
+        - ens3
       networks:
-        - oam
-        - storage
-        - overlay
-        - calico
+        - gp
 
   storage:
     physical_devices:
