@@ -41,6 +41,8 @@ metadata:
 data:
   # NEWSITE-CHANGEME: The next node's IPv4 addressing
   addressing:
+    - network: oob
+      address: 192.168.22.5
     - network: gp
       address: 192.168.22.5
   # NEWSITE-CHANGEME: The next node's host profile
